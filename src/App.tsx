@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Tag, ExternalLink, Home, Layout, MonitorPlay } from 'lucide-react';
+import { Cpu, Tag, ExternalLink, Home, Layout, MonitorPlay, AppWindow } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -32,6 +32,16 @@ const projects: Project[] = [
     link: 'https://gamma.app/docs/-exhrt58hkk0cnup?mode=present#card-g48l2rc0j2jd8lf',
     icon: <MonitorPlay className="w-12 h-12 text-[#B89020]" strokeWidth={1.5} />,
     type: 'GAMMA APP',
+  },
+  {
+    id: '3',
+    title: '世界計畫 宵崎奏主題網站',
+    description: '使用 Strikingly 製作的世界計畫（Project Sekai）角色「宵崎奏」的主題介紹網站。',
+    year: '2026',
+    tags: ['Strikingly', 'Project Sekai', 'Website Builder'],
+    link: 'https://cyan-pigeon-108qn7c.mystrikingly.com/',
+    icon: <AppWindow className="w-12 h-12 text-[#B89020]" strokeWidth={1.5} />,
+    type: 'STRIKINGLY SITE',
   },
 ];
 
