@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Tag, ExternalLink, Home, Layout, MonitorPlay, AppWindow } from 'lucide-react';
+import { Cpu, Tag, ExternalLink, Home, Layout, MonitorPlay, AppWindow, Swords } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -42,6 +42,16 @@ const projects: Project[] = [
     link: 'https://cyan-pigeon-108qn7c.mystrikingly.com/',
     icon: <AppWindow className="w-12 h-12 text-[#B89020]" strokeWidth={1.5} />,
     type: 'STRIKINGLY SITE',
+  },
+  {
+    id: '4',
+    title: '期末作業 刀劍神域愛麗絲篇',
+    description: '利用 HTML5 UP! 範本製作的刀劍神域愛麗絲篇介紹網站。',
+    year: '2026',
+    tags: ['HTML5 UP!', 'Anime', 'Web Design'],
+    link: 'http://saoaliceweb.barian.moe/',
+    icon: <Swords className="w-12 h-12 text-[#B89020]" strokeWidth={1.5} />,
+    type: 'HTML SITE',
   },
 ];
 
@@ -124,16 +134,28 @@ export default function App() {
                 {/* Action Button */}
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all duration-200 text-white font-medium"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>啟動工具</span>
+                  <span>前往頁面</span>
                 </a>
               </div>
             </div>
           ))}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="w-full py-6 mt-auto border-t border-white/5 bg-[#0F111A]/50 backdrop-blur-sm flex justify-center items-center">
+        <p className="text-gray-400 text-sm tracking-widest flex items-center gap-1">
+          <a href="https://barian.moe" target="_blank" rel="noopener noreferrer" className="text-[#B89020] hover:text-[#d4af37] transition-colors font-medium">
+            幽影櫻
+          </a> 
+          <span>製作</span>
+        </p>
+      </footer>
     </div>
   );
 }
